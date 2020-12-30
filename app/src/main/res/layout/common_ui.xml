@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ui_layout"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <com.google.vrtoolkit.cardboard.CardboardView
+        android:id="@+id/cardboard_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <cn.gietv.vrPlayer.renderer2.CardboardOverlayView
+        android:id="@+id/overlay"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/top_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        >
+        <ImageView
+            android:id="@+id/exit_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/navigation_button_normal"
+            android:padding="18dp"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            />
+
+        <ImageView
+            android:id="@+id/vr_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:gravity="right"
+            android:src="@mipmap/green_vr"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/mediacontroller_play_pause"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:background="#00000000"
+        android:src="@mipmap/mediacontroller_pause"
+        android:scaleType="fitXY"
+        android:layout_margin="10dp"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>
